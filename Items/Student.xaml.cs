@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ReportGeneration_Baklanova.Classes;
 
 namespace ReportGeneration_Baklanova.Items
 {
@@ -20,9 +21,14 @@ namespace ReportGeneration_Baklanova.Items
     /// </summary>
     public partial class Student : UserControl
     {
-        public Student()
+        private StudentContext student;
+        private Main main;
+       
+        public Student(StudentContext student, Main main)
         {
             InitializeComponent();
+            this.student = student;
+            this.main =  main;
         }
     }
 }
